@@ -1,0 +1,12 @@
+[
+  {
+    "CLASSNAME": "IncomingTransfer",
+    "INSTANCE": {
+      "sender": "Eltern",
+      "recipient": "Jugendkonto",
+      "date": "23.05.2005",
+      "amount": 750.0,
+      "description": "Geld"
+    }
+  }
+]

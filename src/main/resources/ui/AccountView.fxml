@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:controller="ui.AccountViewController"
+        prefWidth="600"
+        prefHeight="500">
+
+    <top>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <Label fx:id="accountNameLabel"
+                   text="Kontname:"/>
+            <Label fx:id="balanceLabel"
+                   text="Kontostand:"/>
+        </VBox>
+    </top>
+
+
+    <center>
+        <ListView fx:id="transactionList"/>
+    </center>
+
+    <bottom>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <!-- Insets = Abstände von allen Seiten -->
+
+            <HBox spacing="10">
+                <Button text="Aufsteigend"
+                        onAction="#sortAsc"/>
+                <Button text="Absteigend"
+                        onAction="#sortDesc"/>
+                <Button text="Nur +"
+                        onAction="#sortPos"/>
+                <Button text="Nur -"
+                        onAction="#sortNeg"/>
+            </HBox>
+
+            <HBox spacing="10">
+                <Button text="Neue Transaktion"
+                        onAction="#addTransaction"/>
+                <Button text="Zurück"
+                        onAction="#goBack"/>
+            </HBox>
+
+        </VBox>
+    </bottom>
+
+</BorderPane>
